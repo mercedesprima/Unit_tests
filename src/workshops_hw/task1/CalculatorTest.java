@@ -7,14 +7,11 @@ public class CalculatorTest {
     public static void main(String[] args) {
 
         assertThat(calculatingDiscount(100,25)).isEqualTo(75);
-        assertThatThrownBy(() ->
-                calculatingDiscount(-150,0)
+        assertThatThrownBy(() -> calculatingDiscount(-150,0)
         ).isInstanceOf(ArithmeticException.class);
-        assertThatThrownBy(() ->
-                calculatingDiscount(500,-50)
+        assertThatThrownBy(() -> calculatingDiscount(500,-50)
         ).isInstanceOf(ArithmeticException.class);
-        assertThatThrownBy(() ->
-                calculatingDiscount(750,100)
+        assertThatThrownBy(() -> calculatingDiscount(750,100)
         ).isInstanceOf(ArithmeticException.class);
 
         System.out.println(calculatingDiscount(1000, 25));
